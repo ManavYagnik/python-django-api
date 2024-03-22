@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to my homepage!</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file_upload">
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- <pre>{{ output }}</pre> -->
+</body>
+</html>
