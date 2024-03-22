@@ -38,13 +38,11 @@ def generate(request, file_name):
     
 
 
+import subprocess
+
 def rundocker(file):
-  
     docker_command = "docker pull nginx:latest"
-
-
-    sudo_command = f"manav12345 | sudo -S {docker_command}"
-    process = subprocess.Popen(sudo_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process = subprocess.Popen(docker_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     # Wait for the command to finish
     stdout, stderr = process.communicate()
@@ -54,8 +52,4 @@ def rundocker(file):
         print(f"Error executing Docker command: {stderr.decode('utf-8')} {file}")
     else:
         print(f"Docker command executed successfully:\n{stdout.decode('utf-8')}, {file} name")
-    
-   
-
-
 
