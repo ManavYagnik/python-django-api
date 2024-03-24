@@ -2,10 +2,26 @@
 <html>
 <head>
     <title>GENERATE Page</title>
+    <style>
+        body{
+            background-color: rgb(166, 166, 166);
+        }
+      div{
+        text-align: center;
+      }
+
+    </style>
 </head>
 <body>
-PLY GENERATED
-<pre> docker exec -it ns python3 pipeline.py  --video-path ./shared/video/{{file_name}} 
+    <div><h3>PLY GENERATED</h3> 
 
+<pre> docker exec -it ns python3 pipeline.py  --video-path ./shared/video/{{file_name}} 
+    <hr>
+    <form method="post" action="/download_file/">
+        {% csrf_token %}
+        <button type="submit">Downliad PLY</button>
+    </form>
+
+</div>
 </body>
 </html>

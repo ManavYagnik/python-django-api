@@ -2,15 +2,28 @@
 <html>
 <head>
     <title>Home Page</title>
+    <style>
+        body{
+            background-color: rgb(166, 166, 166);
+        }
+      div{
+        text-align: center;
+      }
+
+    </style>
 </head>
-<body>
-   success page
-<pre> {{file_name}}</pre>  
+<body >
+    
+<div >
+  <b> {{file_name}} </b> has been uploded 
+ </div>
+ <hr>
+ <div>
 <form method="post">
     {% csrf_token %}
-    <button type="submit">GENERATE</button>
+    <button type="submit">GENERATE POINT CLOUD</button>
 </form>
-
+</div>
 </pre>
 </body>
 </html>

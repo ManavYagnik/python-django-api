@@ -2,15 +2,32 @@
 <html>
 <head>
     <title>Home Page</title>
+    <style>
+        body {
+          background-color: rgb(185, 185, 185);
+        }
+        
+        h1 {
+        color: white;
+          text-align: center;
+        }
+        div{
+            text-align: center;
+        }
+        </style>
 </head>
 <body>
-    <h1>Welcome to my homepage!</h1>
+    <div>
+    <h1>Generating Point Clouds</h1>
+    <hr>
+    Upload video to genrate poing cloud
+    <hr>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="file" name="file_upload">
+        <input type="file" name="file_upload" >
         <button type="submit">Upload</button>
     </form>
-
+</div>
     <!-- <pre>{{ output }}</pre> -->
 </body>
 </html>
